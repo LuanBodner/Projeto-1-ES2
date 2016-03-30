@@ -1,0 +1,102 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[portuguese]{babel}
+\author{Paulo Batista da Costa}
+\title{PBR - Projeto CVlates : Visão do Testador}
+\begin{document}
+\maketitle
+\tableofcontents
+\begin{quotation}
+\newpage
+\section{Introdução}
+\section{Casos de Teste}
+\subsection{Caso de teste - Requisito funcional 1}
+
+\textbf{RF\_1: O sistema deve permitir o registro dos dados dos doadores de sangue}
+
+Teste:
+\begin{itemize}
+\item[a.] Realizar um cadastro tomando um \textbf{boolean} como resposta de êxito de execução.
+\item[b.] Realizar consulta do cadastro realizado e verificar sua disposição no banco.
+\item[c.] Realizar o cadastro do mesmo doador e verificar se o sistema aceitou. Em caso de aceite o teste identificou um erro. 
+\item[d.] Verificar os códigos dos doadores. Todos devem ser distintos entre si. 
+\end{itemize}
+\textbf{RF\_2:O sistema não deve permitir o registro de possíveis doadores com idade superior a 69 anos}
+
+Teste:
+
+Este teste pode ser descrito em uma única etapa, na qual é realizada a diferença entre a data de nascimento e a data do dia atual (data da realização de cadastro). Caso o sistema tenha aceitado um cadastro cujo cálculo foi igual ou superior ao limite de 69 anos o erro será reportado.
+
+
+\textbf{RF\_3: O sistema deve permitir apenas ao responsável pelo hemocentro (gerente) indicar quem são os usuários autorizados a utilizar o sistema}
+
+Teste:
+\begin{itemize}
+\item[a.] Um funcionário sabidamente autorizado deve acessar o sistema. Caso não tenha êxito, o teste reportará um erro.
+\item[b.] Um funcionário sabidamente não autorizado deve realizar a tentativa de acessar o sistema. Caso ele consiga o teste deverá reportar um erro.
+\end{itemize}
+\textbf{RF\_4:O sistema deve informar dados relacionados a última doação (se existir) feita pelo usuário. (dados necessários presentes no “anexo III”)}
+Teste:
+\begin{itemize}
+\item[a.] Um cadastro de doação deve ser realizado para caso de teste.
+\item[b.] A recuperação teste dos dados informados no anexo III deve ser realizada. Caso os dados tenham retornado com êxito, o teste não captou erros.
+\item[c.] Caso algum dado não tenha retornado ou tenha sofrido alteração inesperada o teste deverá reportar a falha.
+\item[d.] Deve ser verificado se os dados retornados estão corretamente associados ao doador. Caso tenha incoerência o teste retornará o erro.
+\item[e.] repetir o processo pelo menos mais duas vezes.
+\end{itemize}
+
+\textbf{RF\_5:O sistema  deve permitir o registro dos dados dos exames(presentes no anexo IV)}
+
+Teste:
+\begin{itemize}
+\item[a.] Realizar um registros de dados teste
+\item[b.] Realizar a consulta no banco solicitando os dados do registro.
+\item[c.] Verificar se os dados de saída da consulta são os mesmo cadastrados no banco no processo de registro. Caso não sejam, retornar uma falha.
+\item[d.] Verificar se os dados estão corretamente associados aos doadores. Caso tenha incoerência na relação, o teste deverá retornar o erro. 
+\end{itemize}
+
+\textbf{RF\_6:O sistema deve permitir o registro da aptidão, tempo inapto e a descrição da inaptidão, se inapto, do doador baseado nas questões e nos exames feitos ao doador}
+
+*Teste:
+\begin{quotation}
+\item[a.] Realizar cadastros de doadores e registros de doações fictícias (datas devem ser simuladas) - apenas para caso de teste. (pelo menos 3 distintos)
+\item[b.] Dentre os casos citados no item anterior, devem constar as inaptidões.
+\item[c.] Verificar retorno dos dados. 
+\end{quotation}
+(*)\textit{Pelo fato do requisito estar mal definido, este caso de teste ficou relativamente mal definido}
+\end{quotation}
+
+\textbf{RF\_7: O sistema deve permitir o registro de bolsas de sangue}
+
+Este teste pode ser descrito como uma  única etapa: Realiza-se o registro de bolsas de sangue e em seguida efetuar consultas no banco. Verificar também se as o estoque de bolsas de sangue está coerente com os registros de doações(para cada doação deve ser gerado equiparadamente uma bolsa de sangue). (Realizar os testes no mínimo 3 vezes para verificar a consistência no decorrer do processo)
+
+
+\textbf{RF\_7:O sistema deve informar quantidade de bolsas de sangue no banco de sangue}
+Este teste pode ser descrito como uma única etapa: Após a realização do teste anterior, utilizar as alterações realizadas para verificar se o número de bosas de sangue é compatível com as doações aceitas pelo sistema. Fazer também, decréscimos de valores (uma vez que nessa suposição a bolsa de sangue seria utilizada para seu propósito). Verificar se o sistema se mantém coerente. Caso tal verificação falhe o teste deverá retornar o erro.
+
+\section{Questões relacionadas ao PBR}
+\textbf{Você tem toda informação necessária para identificar o item a ser testado? Você pode gerar um bom caso de teste para cada item?}
+Para ambas as perguntas a resposta é negativa. Apesar do alto detalhamento da documentação, alguns detalhes não foram descritos. Como exemplo disso tem-se o caso do requisito funcional relacionado a inaptidão de um doador. Em nenhum ponto da documentação isso foi explicado de forma clara para o entendimento do termo. Isso prejudicou a elaboração de um teste para o requisito.
+
+\textbf{Você tem certeza de que os teste gerados fornecerão os valores corretos nas unidades corretas?}
+
+Os testes conferem valores de dimensões simples e deduzíveis no contexto de mundo, portanto não há grande dificuldade na determinação da corretude dos dados.
+\textbf{Existe uma outra interpretação dos requisitos de forma que o programador possa estar se baseando nela?}
+Existe, pois apesar dos requisitos funcionais serem listados igualmente a todos os integrantes da equipe tal texto pode ter mais interpretações. Isso é algo relativamente variável.
+
+\textbf{Existe um outro requisito para o qual você poderia gerar um caso de teste similar, mas que poderia levar a um resultado contraditório?}
+
+Os testes foram devidamente elaborados com o objetivo de serem determinísticos. Portanto não há chances de gerar um resultado contraditório dado o cenário simples de observação de \textbf{CRUD} com o banco de dados (O sistema é simples, pois na verdade é apenas o gerenciador de informações focado na implementação do banco de dados -- Portanto, a maior parte das verificações está focada quanto a corretude dos dados armazenados em banco). 
+
+
+\textbf{ A especificação funcional ou de requisitos faz sentido de acordo com aquilo que você conhece sobre a aplicação ou a partir daquilo que está descrito na especificação geral?
+}
+
+A especificação faz sentido, porém um ponto crucial e crítico a ser levantado é a má utilização do idioma nativo (português). A documentação apesar de mal escrita, esclareceu os pontos necessários. Isto pois o sistema não é de grande complexidade, pois como dito anteriormente pode ser resumido em operações de banco (operações de \textbf{CRUD} envolvendo o cenário da doação de sangue).
+\end{document}
+
+
