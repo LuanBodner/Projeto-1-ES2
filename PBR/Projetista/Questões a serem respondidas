@@ -1,0 +1,17 @@
+Projetista
+- Use o diagrama que lhe for mais conveniente
+- Questões:
+ -- Todos os elementos (dados, estruturas de dados e funções) necessários foram definidos?
+SIM
+ -- Todas as interfaces são especificadas e consistentes?
+SIM
+ -- Foi possível definir todos os tipos de dados? (ex: unidades e precisão)
+EM PARTES
+ -- Todas informações necessárias para o projeto estão disponíveis?
+SIM
+ -- Está tudo especificado? (há alguma especificação funcional/requisito faltando?)
+NÃO
+ -- Há algum ponto em que você não está certo sobre o que deve ser feito devido à falta de clareza na especificação do requisito/especificação funcional?
+A PRINCIPIO ESTA TUDO CLARO
+ -- A especificação funcional/requisito faz sentido considerando o que você sabe sobre o assunto ou considerando o que foi especificado nas descrições gerais/introdução?
+SIM
