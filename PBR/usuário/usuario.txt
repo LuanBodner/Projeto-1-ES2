@@ -1,3 +1,10 @@
+Documento de requisitos - usuário
+
+02/04/2016: 13:00-13:30
+03/04/2016: 12:30 - 16:00
+
+
+
 Usuário
 - Definir um conjunto de funções que o usuário esteja apto a executar, iniciando dos mais óbvios até chegar  nos menos comuns ou especiais.
 R:Logar, cadastrar doador, consultar e atualizar o número de bolsas de sangue cadastrar
