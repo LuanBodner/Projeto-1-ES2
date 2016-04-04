@@ -1,0 +1,32 @@
+Documento de requisitos - usuário
+
+02/04/2016: 13:00-13:30
+03/04/2016: 12:30 - 16:00
+
+
+
+Usuário
+- Definir um conjunto de funções que o usuário esteja apto a executar, iniciando dos mais óbvios até chegar  nos menos comuns ou especiais.
+R:Logar, cadastrar doador, consultar e atualizar o número de bolsas de sangue cadastrar
+doação, inserir documentos/exames do doador, consultar e editar aptidão do doador. Para
+o caso do gerente, também cadastrar funcionários.
+
+
+- Usar mockups? Casos de Uso? Você Decide!
+R:O ideal serão os casos de uso, mas a forma da documentação não facilita sua utilização.
+
+- Questões:
+ -- Todas as funções necessárias para escrever os cenários estão especificadas no documento de requisitos ou na especificação funcional?
+R:Não. Faltam os dados de funcionários.
+
+ -- As condições iniciais para definir (iniciar) os cenários estão claras e corretas?
+R:Não. Diz-se que deve-se usar o sistema durante todo o processo de coleta, mas o fluxo
+de acontecimentos não está claro.
+ -- As interfaces entre as funções estão bem definidas e compatíveis (por ex., as entradas de uma função têm ligação com as saídas da função anterior?)
+R:Não estão bem definidas.
+ -- Você consegue chegar num estado do sistema que deve ser evitado (por ex., por razões de segurança)?
+R:Impossível garantir.
+ -- Os cenários podem fornecer diferentes respostas dependendo de como a especificação é interpretada?
+R:Sim.
+ -- A especificação funcional faz sentido de acordo com o que você conhece sobre essa aplicação ou sobre o que foi especificado em uma descrição geral?
+R:Sim, mas está incompleta.
