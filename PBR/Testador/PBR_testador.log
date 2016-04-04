@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  31 MAR 2016 11:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.15)  3 APR 2016 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,13 +449,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  [1
 
 ]
-Overfull \hbox (5.34544pt too wide) in paragraph at lines 42--44
+Overfull \hbox (5.34544pt too wide) in paragraph at lines 43--45
 \OT1/cmr/bx/n/12 RF[]4:O sis-tema deve in-for-mar da-dos re-la-ci-o-na-dos a ^^
 Sultima
  []
 
 [2]
-Overfull \hbox (2.34584pt too wide) in paragraph at lines 66--67
+Overfull \hbox (2.34584pt too wide) in paragraph at lines 67--68
 []\OT1/cmr/m/n/12 Realizar ca-das-tros de do-a-do-res e re-gis-tros de doa^^Xc~
 oes
  []
@@ -468,13 +468,13 @@ Here is how much of TeX's memory you used:
  6429 multiletter control sequences out of 15000+600000
  13356 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,24p,491b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,24p,491b,256s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i12.pfb>
-Output written on PBR_testador.pdf (6 pages, 65185 bytes).
+Output written on PBR_testador.pdf (6 pages, 65491 bytes).
 PDF statistics:
  39 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
