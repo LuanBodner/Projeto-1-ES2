@@ -1,0 +1,194 @@
+\documentclass[12pt,a4paper,final]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage[portuguese]{babel}
+\author{Gerente: Luan Bodner do Rosário}
+\title{Plano de Projeto - Projeto 1}
+\begin{document}
+\maketitle
+\section*{Planejamento}
+
+Este documento tem o intuíto de definir e dividir as principais tarefas do sistema a ser implementado para a disciplina de Engenharia de Software 2.\\
+Para a definição das tarefas será utilizado o método EAP(Estrutura Analítica do Projeto) e com base nessa divisão, será utilizado o PERT(\textit{Program Evaluation and Review Technique}) para fazer a estimativa de tempo de cada uma dessas partes do sistema.
+A EAP do projeto é definida conforme:
+
+\begin{enumerate}
+\item \textbf{Hemosystem}
+\begin{enumerate}[label*=\arabic*.]
+\item \textbf{Documentação}
+\begin{enumerate}[label*=\arabic*.]
+\item \textit{Perspective Base Reading}
+\item Atualização do Documento de Requisitos
+\item Diagramas de Caso de Uso
+\item Diagramas de Classe
+\item Revisão dos Documentos
+\end{enumerate}
+\item \textbf{Infraestrutura}
+\begin{enumerate}[label*=\arabic*.]
+\item Definição do BD
+\item Criação do \textit{Script}
+\item Revisão do BD
+\end{enumerate}
+\item \textbf{Desenvolvimento}
+\begin{enumerate}[label*=\arabic*.]
+\item Criação das classes base
+\item Implementação das funcionalidades definidas pelo usuário
+\item Implementação da Interface entre as classes
+\item Definição das \textit{views} do BD
+\end{enumerate}
+\item \textbf{Interface}
+\begin{enumerate}[label*=\arabic*.]
+\item Definição das telas
+\item Conectar a interface com as funcionalidades
+\end{enumerate}
+\item \textbf{Testes}
+
+\end{enumerate}
+\end{enumerate}
+
+
+\newpage
+As tarefas a serem implementadas prévia às tarefas de programação são:
+
+\begin{enumerate}
+\item Documentação do Projeto
+\begin{enumerate}
+
+\item Perspective Base Reading : Tarefa já concluida e documentada no laudo presente no repositório do Projeto.
+
+\item Atualização do Documento de Requisitos: Tarefa já concluida e documentada no laudo presente no repositório do Projeto.
+
+\item Diagrama de Classe : Tarefa que ainda deverá ser realizada pelo Projetista Josimar Loch para que possa ser levado para revisão e refinamento.
+\begin{itemize}
+\item Estimativa de tempo para término da tarefa : \\
+Dada pela Fórmula : TE = O + 4 M + P / 6\\
+Tempo Otimista (O) = 2.5h\\
+Tempo Mais Provável (M) = 5h\\
+Tempo Pessimista (P) = 10h\\
+Tempo Esperado Total = 7h
+\end{itemize} 
+
+\item Diagrama de Caso de Uso : Também sob a responsabilidade do Projetista do projeto.
+\begin{itemize}
+\item Estimativa de tempo para término da tarefa : 
+Tempo Otimista (O) = 2h\\
+Tempo Mais Provável (M) = 4h\\
+Tempo Pessimista (P) = 6h\\
+Tempo Esperado Total = 5h
+\end{itemize} 
+
+\item Controle de Qualidade : Após a realização da primeira fase da criação de diagramas, ou mesmo concorrentemente com a sua realização, os diagramas devem ser analisados e refinados para que o processo de programação ocorra o mais rápido possível. Controle de qualidade será uma tarefa conjunta entre todos os membros da equipe.
+\begin{itemize}
+\item Estimativa de tempo para término da tarefa :\\
+Tempo Otimista (O) = 1h\\
+Tempo Mais Provável (M) = 2h\\
+Tempo Pessimista (P) = 3h\\
+Tempo Esperado Total = 2.5h
+\end{itemize} 
+
+\item Revisão : Após a revisão ser concluída e os erros listados previamente na análise PBR e encontrados na documentação forem encontrados, a documentação deverá passar por mudanças e submetidos em forma final. Responsabilidade do Projetista Josimar.
+\begin{itemize}
+\item Estimativa de tempo para término da tarefa :
+Tempo Otimista (O) = 0.5h\\
+Tempo Mais Provável (M) = 1h\\
+Tempo Pessimista (P) = 3h\\
+Tempo Esperado Total = 1.25h
+\end{itemize} 
+\end{enumerate}
+
+Esses diagramas devem estar em um formato acessível para que o Programador Felipe Veiga Ramos possa lê-los com mais facilidade.\\
+Todas essas sub-etapas podem (e devem) ser feitas concorrentemente.\\
+As ferramentas utilizadas nessa parte do desenvolvimento são:
+\begin{enumerate}
+\item Astah
+\item Github
+\item Issue Tracker/Github
+\end{enumerate}
+
+\item Infraestrutura
+\begin{enumerate}
+\item Criação do Banco de Dados : Após a realização dos diagramas, o banco de dados deve ser criado com base nos dados necessários. Isso será uma tarefa conjunta entre o Projetista e o Programador.
+Tempo Otimista (O) = 4h\\
+Tempo Mais Provável (M) = 5h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 8h
+
+\item Criação do \textit{Script} : Após os dados a serem armazenados forem definidos, deve-se criar o \textit{script} do banco de dados. Tarefa feita entre Projetista e Programador.
+Tempo Otimista (O) = 2h\\
+Tempo Mais Provável (M) = 3.5h\\
+Tempo Pessimista (P) = 7h\\
+Tempo Esperado Total = 4.6h
+
+\item Revisão BD : O banco deve ser revisado pelo Gerente do Projeto para evitar erros prévios ao início de desenvolvimento.
+Tempo Otimista (O) = 1h\\
+Tempo Mais Provável (M) = 2h\\
+Tempo Pessimista (P) = 4h\\
+Tempo Esperado Total = 2.5h
+\end{enumerate}
+
+As ferramentas utilizadas nessa parte do projeto está sujeito a escolha do Programador e Projetista.
+
+\item Desenvolvimento
+\begin{enumerate}
+
+\item Criação das Classes Base : Criação das estruturas básicas e classes básicas para as operações lógicas do sistema a ser implementado. Todas as tarefas do desenvolvimento é tarega do Programador.
+Tempo Otimista (O) = 3h\\
+Tempo Mais Provável (M) = 5h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 7.5h
+
+\item Implementação das funcionalidades : Com base nos diagramas e casos de uso definidos no documento original do projeto e o documento revisado com informações novas, as funcionalidades devem ser implementadas.
+Tempo Otimista (O) = 12h\\
+Tempo Mais Provável (M) = 15h\\
+Tempo Pessimista (P) = 20h\\
+Tempo Esperado Total = 40h
+
+\item Implementação da interface entre as classes : Após as partes singulares do sistema estiverem implementadas, as partes do sistema devem ser conectadas de acordo com as especificações feitas.
+Tempo Otimista (O) = 5h\\
+Tempo Mais Provável (M) = 6h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 10h
+
+\item Definição das \textit{views} do BD : Por questões de segurança, deve-se criar views diferentes no banco para cada nível de prioridade dos usuários.
+Tempo Otimista (O) = 4h\\
+Tempo Mais Provável (M) = 6h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 9h
+\end{enumerate}
+
+\item Interface
+\begin{enumerate}
+\item Definição das telas : Após o programa estiver completado, a interface com o usuário deve ser definida.
+Tempo Otimista (O) = 3h\\
+Tempo Mais Provável (M) = 4h\\
+Tempo Pessimista (P) = 5h\\
+Tempo Esperado Total = 5.5h
+\item Conectar a interface com as funcionalidades : Após a interface estiver "desenhada", os módulos resultantes devem ser conectados ao código do programa e suas entradas/saídas.
+Tempo Otimista (O) = 4h\\
+Tempo Mais Provável (M) = 6h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 8h
+\end{enumerate}
+
+\item Testes : Com o programa completo, ou mesmo durante o seu desenvolvimento, o Testador Paulo Batista deve fazer os testes básicos definidos no PBR para verificar se o programa está funcionando corretamente.
+Tempo Otimista (O) = 4h\\
+Tempo Mais Provável (M) = 6h\\
+Tempo Pessimista (P) = 8h\\
+Tempo Esperado Total = 8h
+
+\end{enumerate}
+
+\section*{Bibliografia}
+http://www.workbreakdownstructure.com/\\
+http://projetoseti.com.br/criar-a-estrutura-analitica-do-projeto-eap/\\
+http://stakeholdernews.com.br/artigo/estimativas-tempo-e-custo-investimentos/
+
+\section*{Horários}
+Início : 6:30 da manhã, 24/05\\
+Término : 11:00 da manhã, 24/05
+
+\end{document}
