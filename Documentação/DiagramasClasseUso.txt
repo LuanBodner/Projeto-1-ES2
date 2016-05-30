@@ -1,0 +1,64 @@
+Diagrama de Casos de Uso
+
+Atores : 
+Doador
+Gerente
+Funcionário
+
+Casos de Uso :
+Caso 1 : Registrar dados/Cadastrar Doador -> Doador,Funcionário
+Caso 2 : Verificar aptidão física -> Doador,Funcionário
+Caso 3 : Definir usuários do sistema -> Gerente
+Caso 4 : Registrar bolsas de Sangue -> Gerente,Funcionário
+Caso 5 : Gerar relatório de bolsas -> Gerente,Funcionário
+
+
+Diagrama de Classes
+
+classe Funcionário
+Atributos:
+Nível de Segurança;
+Nome;
+Endereço Comercial;
+Endereço Residencial;
+Senha do sistema;
+E-mail.
+Métodos:
+bool registraDoador();
+bool registraResultadoTriagemClínica(Doador);
+void registraBolsaColetada();
+void registraDadosDoação();
+void buscaUltimaDoaçãoFeita(Doador);
+void geraRelatóriosBolsasArmazenadas();
+
+Classe Gerente : herda Funcionário
+Atributos:
+~
+Metodos:
+bool definirPrivilégioFuncionário(Funcionário);
+
+Classe Doador
+Atributos:
+Cód. do Doador;
+Cód. da Amostra;
+Nome;
+Nome do Pai;
+Nome da mãe;
+Sexo;
+Data de Nasc.
+Estado Civil;
+Naturalidade;
+UF;
+Nacionalidade;
+Documento(Tipo : RG/CPF);
+Número do documento;
+Órgão Expedidor;
+Escolaridade;
+Profissão;
+Trabalho Atual;
+Endereço Comercial;
+Endereço Residencial;
+E-mail.
+Métodos:
+getters e setters.
+
