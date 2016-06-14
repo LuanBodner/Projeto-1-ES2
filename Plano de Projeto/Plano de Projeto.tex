@@ -27,15 +27,11 @@ A EAP do projeto é definida conforme:
 \item Diagramas de Classe
 \item Revisão dos Documentos
 \end{enumerate}
-\item \textbf{Infraestrutura}
-\begin{enumerate}[label*=\arabic*.]
-\item Definição do BD
-\item Criação do \textit{Script}
-\item Revisão do BD
-\end{enumerate}
 \item \textbf{Desenvolvimento}
 \begin{enumerate}[label*=\arabic*.]
 \item Criação das classes base
+\item Definição do BD
+\item Revisão do BD
 \item Implementação das funcionalidades definidas pelo usuário
 \item Implementação da Interface entre as classes
 \item Definição das \textit{views} do BD
@@ -117,12 +113,6 @@ Tempo Mais Provável (M) = 5h\\
 Tempo Pessimista (P) = 8h\\
 Tempo Esperado Total = 8h
 
-\item Criação do \textit{Script} : Após os dados a serem armazenados forem definidos, deve-se criar o \textit{script} do banco de dados. Tarefa feita entre Projetista e Programador.
-Tempo Otimista (O) = 2h\\
-Tempo Mais Provável (M) = 3.5h\\
-Tempo Pessimista (P) = 7h\\
-Tempo Esperado Total = 4.6h
-
 \item Revisão BD : O banco deve ser revisado pelo Gerente do Projeto para evitar erros prévios ao início de desenvolvimento.
 Tempo Otimista (O) = 1h\\
 Tempo Mais Provável (M) = 2h\\
@@ -182,6 +172,48 @@ Tempo Esperado Total = 8h
 
 \end{enumerate}
 
+\section*{Tabela de Atividades e Precedência}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Atividade & Descrição & Atividades Prec. & Duração \\ 
+\hline 
+A & Diagramas de Caso de Uso & - & • \\ 
+\hline 
+B & Diagramas de Classe & B & • \\ 
+\hline 
+C & Revisão dos Documentos & A,B & • \\ 
+\hline 
+D & Criação das Classes básicas & C & • \\ 
+\hline 
+E & Criação do Banco & C & • \\ 
+\hline 
+F & Definir os campos & & \\ & das tabelas & E & • \\ 
+\hline 
+G & Criar métodos para & & \\ & lidar com o banco & E & • \\
+\hline 
+H & Definir métodos & & \\ & para registro dos doadores & D & • \\ 
+\hline 
+I & Definir métodos & & \\ & para registro dos exames & H & • \\ 
+\hline 
+J & Definir métodos para verificar & & \\ & a segurança quanto & & \\ & às bolsas de sangue & D & • \\ 
+\hline 
+K & Definir as pesquisas  & & \\ & possíveis dentro do banco & J & • \\ 
+\hline 
+L & Criar Interface para & & \\ & os usuários & K & • \\ 
+\hline 
+M & Conectar a interface com & & \\ & a aplicação e o banco de dados & G & • \\ 
+\hline 
+N & Testar funcinalidade dos métodos & M & • \\ 
+\hline 
+O & Testar as entradas da interface & M & • \\ 
+\hline 
+P & Testar a conexão com & & \\ & o Banco de dados & E & • \\ 
+\hline 
+\end{tabular} 
+\end{center}
+
+\newpage
 \section*{Bibliografia}
 http://www.workbreakdownstructure.com/\\
 http://projetoseti.com.br/criar-a-estrutura-analitica-do-projeto-eap/\\
