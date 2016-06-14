@@ -63,18 +63,18 @@ As tarefas a serem implementadas prévia às tarefas de programação são:
 \item Estimativa de tempo para término da tarefa : \\
 Dada pela Fórmula : TE = O + 4 M + P / 6\\
 Tempo Otimista (O) = 2.5h\\
-Tempo Mais Provável (M) = 5h\\
-Tempo Pessimista (P) = 10h\\
-Tempo Esperado Total = 7h
+Tempo Mais Provável (M) = 3.5h\\
+Tempo Pessimista (P) = 5h\\
+Tempo Esperado Total = 3.5h
 \end{itemize} 
 
 \item Diagrama de Caso de Uso : Também sob a responsabilidade do Projetista do projeto.
 \begin{itemize}
 \item Estimativa de tempo para término da tarefa : 
 Tempo Otimista (O) = 2h\\
-Tempo Mais Provável (M) = 4h\\
-Tempo Pessimista (P) = 6h\\
-Tempo Esperado Total = 5h
+Tempo Mais Provável (M) = 3h\\
+Tempo Pessimista (P) = 4h\\
+Tempo Esperado Total = 3h
 \end{itemize} 
 
 \item Controle de Qualidade : Após a realização da primeira fase da criação de diagramas, ou mesmo concorrentemente com a sua realização, os diagramas devem ser analisados e refinados para que o processo de programação ocorra o mais rápido possível. Controle de qualidade será uma tarefa conjunta entre todos os membros da equipe.
@@ -108,16 +108,16 @@ As ferramentas utilizadas nessa parte do desenvolvimento são:
 \item Infraestrutura
 \begin{enumerate}
 \item Criação do Banco de Dados : Após a realização dos diagramas, o banco de dados deve ser criado com base nos dados necessários. Isso será uma tarefa conjunta entre o Projetista e o Programador.
-Tempo Otimista (O) = 4h\\
-Tempo Mais Provável (M) = 5h\\
-Tempo Pessimista (P) = 8h\\
-Tempo Esperado Total = 8h
+Tempo Otimista (O) = 0.5h\\
+Tempo Mais Provável (M) = 0.6h\\
+Tempo Pessimista (P) = 0.7h\\
+Tempo Esperado Total = 0.6h
 
-\item Revisão BD : O banco deve ser revisado pelo Gerente do Projeto para evitar erros prévios ao início de desenvolvimento.
+\item Revisão/Testes de conexão BD : O banco deve ser revisado pelo Gerente do Projeto para evitar erros.
 Tempo Otimista (O) = 1h\\
-Tempo Mais Provável (M) = 2h\\
-Tempo Pessimista (P) = 4h\\
-Tempo Esperado Total = 2.5h
+Tempo Mais Provável (M) = 1.5h\\
+Tempo Pessimista (P) = 2h\\
+Tempo Esperado Total = 1.5h
 \end{enumerate}
 
 As ferramentas utilizadas nessa parte do projeto está sujeito a escolha do Programador e Projetista.
@@ -126,10 +126,10 @@ As ferramentas utilizadas nessa parte do projeto está sujeito a escolha do Prog
 \begin{enumerate}
 
 \item Criação das Classes Base : Criação das estruturas básicas e classes básicas para as operações lógicas do sistema a ser implementado. Todas as tarefas do desenvolvimento é tarega do Programador.
-Tempo Otimista (O) = 3h\\
-Tempo Mais Provável (M) = 5h\\
-Tempo Pessimista (P) = 8h\\
-Tempo Esperado Total = 7.5h
+Tempo Otimista (O) = 2h\\
+Tempo Mais Provável (M) = 3h\\
+Tempo Pessimista (P) = 4h\\
+Tempo Esperado Total = 3h
 
 \item Implementação das funcionalidades : Com base nos diagramas e casos de uso definidos no documento original do projeto e o documento revisado com informações novas, as funcionalidades devem ser implementadas.
 Tempo Otimista (O) = 12h\\
@@ -178,37 +178,41 @@ Tempo Esperado Total = 8h
 \hline 
 Atividade & Descrição & Atividades Prec. & Duração \\ 
 \hline 
-A & Diagramas de Caso de Uso & - & • \\ 
+A & Diagramas de Caso de Uso & - & 3h \\ 
 \hline 
-B & Diagramas de Classe & B & • \\ 
+B & Diagramas de Classe & A & 3.5h \\ 
 \hline 
-C & Revisão dos Documentos & A,B & • \\ 
+C & Controle de Qualidade & A,B & 2.5h \\ 
 \hline 
-D & Criação das Classes básicas & C & • \\ 
+D & Revisão dos Documentos & C & 1.25h \\
 \hline 
-E & Criação do Banco & C & • \\ 
+E & Criação das Classes básicas & C & 3h \\
 \hline 
-F & Definir os campos & & \\ & das tabelas & E & • \\ 
+F & Criação do Banco & D & 0.6h \\ 
 \hline 
-G & Criar métodos para & & \\ & lidar com o banco & E & • \\
+G & Definir os campos & & \\ & das tabelas & F & 2h \\ 
 \hline 
-H & Definir métodos & & \\ & para registro dos doadores & D & • \\ 
+H & Criar métodos para & & \\ & lidar com o banco & F & 10h \\
 \hline 
-I & Definir métodos & & \\ & para registro dos exames & H & • \\ 
+I & Criar métodos para & & \\ & interligar os & & \\ & módulos do sistema & O & 11h \\
 \hline 
-J & Definir métodos para verificar & & \\ & a segurança quanto & & \\ & às bolsas de sangue & D & • \\ 
+J & Definir métodos & & \\ & para registro dos doadores & E & 3h \\ 
 \hline 
-K & Definir as pesquisas  & & \\ & possíveis dentro do banco & J & • \\ 
+K & Definir métodos & & \\ & para registro dos exames & E &  3h \\ 
 \hline 
-L & Criar Interface para & & \\ & os usuários & K & • \\ 
+L & Definir métodos para verificar & & \\ & a segurança quanto & & \\ & às bolsas de sangue & E & 3h \\ 
 \hline 
-M & Conectar a interface com & & \\ & a aplicação e o banco de dados & G & • \\ 
+M & Definir as pesquisas  & & \\ & possíveis dentro do banco & G & 10h \\ 
 \hline 
-N & Testar funcinalidade dos métodos & M & • \\ 
+N & Criar Interface para & & \\ & os usuários & K & 5h \\ 
 \hline 
-O & Testar as entradas da interface & M & • \\ 
+O & Conectar a interface com & & \\ & a aplicação e o banco de dados & N & 5h \\ 
 \hline 
-P & Testar a conexão com & & \\ & o Banco de dados & E & • \\ 
+P & Testar funcinalidade dos métodos & O & 4h \\ 
+\hline 
+Q & Testar as entradas da interface & O & 4h \\ 
+\hline 
+R & Testar a conexão com & & \\ & o Banco de dados & F & 1.5h \\ 
 \hline 
 \end{tabular} 
 \end{center}
@@ -220,7 +224,22 @@ http://projetoseti.com.br/criar-a-estrutura-analitica-do-projeto-eap/\\
 http://stakeholdernews.com.br/artigo/estimativas-tempo-e-custo-investimentos/
 
 \section*{Horários}
-Início : 6:30 da manhã, 24/05\\
-Término : 11:00 da manhã, 24/05
+Primeira Seção:\\
+\begin{itemize}
+\item Início : 6:30 da manhã, 24/05
+\item Término : 11:00 da manhã, 24/05
+\end{itemize}
+\\
+Segunda Seção\\
+\begin{itemize}
+\item Início : 9:00 da manhã, 14/06
+\item Término : 11:00 da manhã 14/06
+\end{itemize}
+\\
+Terceira Seção\\
+\begin{itemize}
+\item Início : 14:00 da tarde, 14/06
+\item Término : 
+\end{itemize}
 
 \end{document}
