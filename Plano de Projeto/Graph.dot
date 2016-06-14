@@ -15,6 +15,9 @@ digraph {
 	m -> n;
 	m -> o;
 	e -> p;
+	j -> i;
+	f -> m;
+	p -> m
 	l -> fim;
 	n -> fim;
 	o -> fim;
