@@ -1,16 +1,44 @@
-\documentclass[12pt,a4paper,final]{report}
+\documentclass[12pt,a4paper,final]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{enumitem}
+\usepackage{amsmath}
 \usepackage[portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{pdfpages}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
 \author{Gerente: Luan Bodner do Rosário}
 \title{Plano de Projeto - Projeto 1}
+\title{Laudo PBR refente ao projeto II }
+
 \begin{document}
-\maketitle
-\section*{Planejamento}
+
+      	\begin{titlepage}
+       	\LARGE
+       	\begin{center}
+       	\vspace{5cm} 
+       	\textbf{Universidade Tecnológica Federal do Paraná \\ \vspace{1.8cm}}
+       	\includegraphics[scale=0.35]{logoutfpr.jpg} \\ \vspace{1.8cm}
+       	\textit{Engenharia de Software II} \vspace{2cm} \\
+       	Luan Bodner do Rosário \\ 1509950 \vspace{2cm} \\ 
+       	PROJETO 1 - PLANEJAMENTO DE DESENVOLVIMENTO DE SOFTWARE \vspace{2cm} \\
+      	Departamento de Ciência da Computação (DACOM) 
+       	
+   	\end{center}
+    \end{titlepage}	
+
+\tableofcontents
+\newpage
+\section{Planejamento}
 
 Este documento tem o intuíto de definir e dividir as principais tarefas do sistema a ser implementado para a disciplina de Engenharia de Software 2.\\
 Para a definição das tarefas será utilizado o método EAP(Estrutura Analítica do Projeto) e com base nessa divisão, será utilizado o PERT(\textit{Program Evaluation and Review Technique}) para fazer a estimativa de tempo de cada uma dessas partes do sistema.
@@ -172,7 +200,7 @@ Tempo Esperado Total = 8h
 
 \end{enumerate}
 
-\section*{Tabela de Atividades e Precedência}
+\section{Tabela de Atividades e Precedência}
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -216,28 +244,66 @@ R & Testar a conexão com & & \\ & o Banco de dados & F & 1.5h \\
 \hline 
 \end{tabular} 
 \end{center}
+A partir desta tabela de atividades, é possível contrurir o grafo que mostra o caminho crítico do projeto e auxilia no planejamento do projeto.\\
+O grafo que representa as tarefas desta tabela foi contruido por meiro da linguagem .DOT. Ela é mostrada na imagem a seguir.
+\subsection{Rede de atividades}
+\begin{figure}\centering{
+\includegraphics[scale=0.27]{Graph1.png}
+\caption{Rede de atividades}}
+\end{figure}
+Por meio desta rede, podemos fazer o cálculo do caminho crítico, que é uma soma simples do maior caminho possível até que se chegue no final do projeto. Verificamos então que o caminho crítico é dado pela imagem a seguir:
+\begin{figure}\centering{
+\includegraphics[scale=0.25]{CPGraph1.png}
+\caption{Caminho Crítico}}
+\end{figure}
 
-\newpage
-\section*{Bibliografia}
-http://www.workbreakdownstructure.com/\\
-http://projetoseti.com.br/criar-a-estrutura-analitica-do-projeto-eap/\\
-http://stakeholdernews.com.br/artigo/estimativas-tempo-e-custo-investimentos/
+Como planejado, foram montadas as redes de caminho para "cedo", de acordo com a fórmula :
+\begin{equation}
+Cedo = max(Cedo anterior + duração)
+\end{equation}
+E também para o caminho de tempo "tarde", de acordo com a fórmula:
+\begin{equation}
+Tarde = min(Tarde posterior - duração)
+\end{equation}
 
-\section*{Horários}
-Primeira Seção:\\
+Portanto, a rede e os pesos das arestas do grafo "cedo" na figura 3 e para o grafo "tarde" na figura 4.
+Assim, por meio dos cálculos necessários, verificamos que a somatória dos caminhos críticos são semelhantes para cedo e tarde, que coloca o projeto dentro dos padrões, não sendo necessário fazer nenhum ajustamento quanto ao tempo de cada uma das tarefas listadas listadas.
+
+\section{Horários de Trabalho}
+Primeira Seção:
 \begin{itemize}
 \item Início : 6:30 da manhã, 24/05
 \item Término : 11:00 da manhã, 24/05
 \end{itemize}
-Segunda Seção:\\
+Segunda Seção:
 \begin{itemize}
 \item Início : 9:00 da manhã, 14/06
 \item Término : 11:00 da manhã 14/06
 \end{itemize}
-Terceira Seção:\\
+Terceira Seção:
 \begin{itemize}
 \item Início : 14:00 da tarde, 14/06
 \item Término : 15:00 da tarde. 14/06
 \end{itemize}
+Quarta Seção:
+\begin{itemize}
+\item Início : 10:00 da tarde, 15/06
+\item Término : 13:00 da tarde. 15/06
+\end{itemize}
+
+\begin{figure}\centering{
+\includegraphics[scale=0.25]{CedoGraph1.png}
+\caption{ Caminho Cedo}}
+\end{figure}
+\begin{figure}\centering{
+\includegraphics[scale=0.25]{TardeGraph1.png}
+\caption{ Caminho Tarde}}
+\end{figure}
+\newpage
+\section{Bibliografia}
+http://www.workbreakdownstructure.com/\\
+http://projetoseti.com.br/criar-a-estrutura-analitica-do-projeto-eap/\\
+http://stakeholdernews.com.br/artigo/estimativas-tempo-e-custo-investimentos/\\
+http://www.ime.usp.br/rvicente/PERT CPM
 
 \end{document}
